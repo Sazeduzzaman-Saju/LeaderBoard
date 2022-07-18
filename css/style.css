@@ -1,0 +1,303 @@
+/* -------------------------------------------------------------------------- */
+/*       =========Google Font OpenSans Import Link ========            */
+/* -------------------------------------------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+
+
+/* -------------------------------------------------------------------------- */
+/*                      ========Common Style========                         */
+/* -------------------------------------------------------------------------- */
+:root {
+	--white: #FFFF;
+	--black: #0000;
+	--brand-color-main: #562EFF;
+	--bg-color: #e4e1e1;
+	--icon-color: #FFC014;
+	--brand-color-secondary: #FFE4E8;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Open Sans', sans-serif;
+	background-color: var(--bg-color);
+}
+
+/* -------------------------------------------------------------------------- */
+/*                      ========Custom Style========                           */
+/* -------------------------------------------------------------------------- */
+header {
+	width: 100%;
+	height: 94px;
+	background-color: var(--brand-color-main);
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.top-bar {
+	width: 930px;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	justify-content: center;
+	align-items: center;
+}
+
+.brand {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.brand p {
+	color: var(--white);
+	font-weight: 300;
+	font-size: 24px;
+}
+
+.brand img {
+	width: 41px;
+	height: 51px;
+}
+
+.menu {
+	width: 100%;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+.menu a {
+	text-decoration: none;
+	color: var(--white);
+	padding: 0px 20px;
+	transition: all 0.4s ease-in;
+}
+
+.menu a:hover {
+	color: var(--icon-color);
+	border-bottom: 1px solid rgb(255, 255, 255);
+	transition: all 0.4s ease-in;
+
+}
+
+.menu img {
+	width: 51px;
+	height: 51px;
+}
+
+
+/* -------------------------------------------------------------------------- */
+/*                        Top Players Area Design Start                       */
+/* -------------------------------------------------------------------------- */
+main {
+	display: flex;
+    flex-direction: column;
+	justify-content: center;
+    align-items: center;
+
+}
+
+.container {
+	width: 870px;
+	background-color: var(--white);
+	margin-top: 1.875rem;
+	padding: 1.875rem;
+	border-radius: 3px;
+
+}
+
+.section-title {
+	color: var(--brand-color-main);
+	font-size: 1.5rem;
+	padding-top: 1.5rem;
+}
+
+.top-players {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-row-gap: 1.5rem;
+	grid-column-gap: 1.5remx;
+
+}
+
+.player img {
+	width: 3.188rem;
+	height: 3.188rem;
+}
+
+.player {
+	display: flex;
+	align-items: center;
+}
+
+.player-name {
+	padding-left: 0.938rem;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                        Top Players Area Design End                       */
+/* -------------------------------------------------------------------------- */
+
+
+/* -------------------------------------------------------------------------- */
+/*                         Top Blogs Area Design Start                        */
+/* -------------------------------------------------------------------------- */
+.blogs {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-column-gap: 30px;
+
+}
+
+.blog img {
+	width: 11.063rem;
+	height: 7.313rem;
+}
+
+.blog {
+	display: flex;
+	align-items: center;
+
+}
+
+.blog-info {
+	width: 100%;
+	padding: 0px 20px;
+}
+
+.blog p span {
+	color: var(--brand-color-main);
+}
+/* -------------------------------------------------------------------------- */
+/*                             Latest Course Start                            */
+/* -------------------------------------------------------------------------- */
+.courses{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 24px;
+}
+.course-details {
+    width: 81px;
+    padding: 0px 15px;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #FEE5DF;
+    border-radius: 14.6913px;
+    color: #ED6B4F;
+}
+.course {
+    padding: 10px 0px;
+    box-shadow: 10px 10px 20px var(--bg-color);
+    border-radius: 10px;
+}
+.course img{
+    width: 265px;
+    height: 104px;
+}
+.course-title, .author {
+    font-size: 20.0336px;
+    padding: 10px 15px;
+}
+.author{
+    font-size: 14.6913px;
+    color: #ED6B4F;
+}
+.rating {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+#special{
+    color: var(--icon-color);
+}
+#empty{
+    color: #AEAEAE;
+}
+.icons span{
+    color: #A2A2A2;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                   @ Media Screen Start  for mobile Device                          */
+/* -------------------------------------------------------------------------- */
+
+@media only screen and (max-width: 666px) {
+	.top-bar {
+		width: 100%;
+
+	}
+	.menu {
+		display: none;
+	}
+	.container{
+		width: 100%;
+		padding: 0rem;
+	}
+
+	.top-players, .blogs, .courses {
+		grid-template-columns: repeat(1, 1fr);
+	  
+	}
+	.player {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+	}
+	.section-title {
+		text-align: center;
+		padding-bottom: 20px;
+	}
+	.course {
+		margin-bottom: 50px;
+		padding: 50px;
+	}
+	.blog {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	.blog-info {
+		width: 100%;
+		text-align: center;
+		width: 300px;
+	}
+	.brand {
+		padding-left: 155px;
+		
+	}
+  }
+
+  /* -------------------------------------------------------------------------- */
+  /*                           Media Query for Tablet                           */
+  /* -------------------------------------------------------------------------- */
+  @media only screen and (max-width: 967px )and (min-width: 768px) {
+	.container{
+		width: 100%;
+		padding: 0px;
+		
+	}
+	.top-players, .blogs, .courses {
+		grid-template-columns: repeat(2, 1fr);
+	  
+	}
+	.section-title {
+		padding-left: 25px;
+	}
+	.player, .course {
+		padding-left: 70px;
+	}
+	.blog {
+		padding-left: 10px;
+	}
+  }
+
+
+
+  /* -------------------------------------------------------------------------- */
+  /*                              All Done Is Well                              */
+  /* -------------------------------------------------------------------------- */
